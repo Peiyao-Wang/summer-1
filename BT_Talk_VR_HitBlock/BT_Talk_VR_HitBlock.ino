@@ -2,7 +2,7 @@
 // ref http://swf.com.tw/?p=712
 
 #include <SoftwareSerial.h>   // 引用程式庫
-unsigned char senddata ;
+byte senddata ;
 
 // 定義連接藍牙模組的序列埠
 SoftwareSerial BT(11, 12); // 接收腳, 傳送腳
@@ -24,7 +24,7 @@ void loop() {
      Serial.print(senddata,HEX);
      Serial.print(")\n");
 
-     delay(200) ;
+     delay(130) ;
      
   // 若收到藍牙模組的資料，則送到「序列埠監控視窗」
   if (BT.available()) {

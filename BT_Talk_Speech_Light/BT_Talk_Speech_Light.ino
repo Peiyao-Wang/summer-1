@@ -10,7 +10,7 @@
 #define LedPinD5 7
 #define LedPinD6 8
 #define LedPinD7 9
-
+#define ascStart 48
 char getdata ;  // 儲存接收資料的變數
 
 // 定義連接藍牙模組的序列埠
@@ -44,55 +44,55 @@ void loop() {
   // 若收到藍牙模組的資料，則送到「序列埠監控視窗」
   if (BT.available()) {
     getdata = BT.read();
-    Serial.print(getdata);
+    Serial.print(getdata, HEX);
   }
 
-    if (getdata == 0)
+    if (getdata == '0')
         {
           allLightOff() ;
         }
 
-    if (getdata == 9)
+    if (getdata == '9')
         {
           allLightOn() ;
         }
 
-    if (getdata == 1)
+    if (getdata == '1')
         {
           digitalWrite(LedPinD0, HIGH) ;
         }
 
-    if (getdata == 2)
+    if (getdata == '2')
         {
           digitalWrite(LedPinD1, HIGH) ;
         }
 
-    if (getdata == 3)
+    if (getdata == '3')
         {
           digitalWrite(LedPinD2, HIGH) ;
         }
 
-    if (getdata == 4)
+    if (getdata == '4')
         {
           digitalWrite(LedPinD3, HIGH) ;
         }
 
-    if (getdata == 5)
+    if (getdata == '5')
         {
           digitalWrite(LedPinD4, HIGH) ;
         }
 
-    if (getdata == 6)
+    if (getdata == '6')
         {
           digitalWrite(LedPinD5, HIGH) ;
         }
 
-    if (getdata == 7)
+    if (getdata == '7')
         {
           digitalWrite(LedPinD6, HIGH) ;
         }
 
-    if (getdata == 8)
+    if (getdata == '8')
         {
           digitalWrite(LedPinD7, HIGH) ;
         }

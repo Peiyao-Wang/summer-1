@@ -1,4 +1,4 @@
-//  ref HC-05與HC-06藍牙模組補充說明（三）：使用Arduino設定AT命令
+// ref HC-05與HC-06藍牙模組補充說明（三）：使用Arduino設定AT命令
 // ref http://swf.com.tw/?p=712
 
 #include <SoftwareSerial.h>   // 引用程式庫
