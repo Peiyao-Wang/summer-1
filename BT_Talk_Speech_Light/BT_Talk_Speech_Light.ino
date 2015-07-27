@@ -40,7 +40,7 @@ void setup() {
 
 void loop() {
      
-     
+    getdata = '@'; 
   // 若收到藍牙模組的資料，則送到「序列埠監控視窗」
   if (BT.available()) {
     getdata = BT.read();
@@ -95,6 +95,11 @@ void loop() {
     if (getdata == '8')
         {
           digitalWrite(LedPinD7, HIGH) ;
+        }
+
+    if (getdata == 'T')
+        {
+          delay(1000);
         }
 
 }
